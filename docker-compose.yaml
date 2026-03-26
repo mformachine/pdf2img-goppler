@@ -1,0 +1,10 @@
+services:
+  poppler:
+    build: .
+    image: mformachine/goppler:latest
+    ports:
+      - "5000:5000"
+    environment:
+      MEDIA_TTL_MINUTES: 60
+      CLEANUP_INTERVAL_MINUTES: 60
+      MAX_FILE_SIZE_MB: 50
