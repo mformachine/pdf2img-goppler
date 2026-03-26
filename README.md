@@ -28,22 +28,22 @@ It keeps the same simple contract as the original Python and Node.js versions:
 ## Docker Hub
 
 ```bash
-docker pull mformachine/poppler-go
-docker run --rm -p 5000:5000 mformachine/poppler-go
+docker pull mformachine/goppler
+docker run --rm -p 5000:5000 mformachine/goppler
 ```
 
 Versioned image example:
 
 ```bash
-docker pull mformachine/poppler-go:1.0.0
-docker run --rm -p 5000:5000 mformachine/poppler-go:1.0.0
+docker pull mformachine/goppler:1.0.0
+docker run --rm -p 5000:5000 mformachine/goppler:1.0.0
 ```
 
 ## Build locally
 
 ```bash
-docker build -t mformachine/poppler-go .
-docker run --rm -p 5000:5000 mformachine/poppler-go
+docker build -t mformachine/goppler .
+docker run --rm -p 5000:5000 mformachine/goppler
 ```
 
 ## docker-compose
@@ -131,23 +131,12 @@ This keeps the original POST → GET flow while limiting how long converted data
 
 ## Kubernetes note
 
-If deployed inside Kubernetes and exposed with a Service named `pdf2img-poppler`, use:
+If deployed inside Kubernetes and exposed with a Service named `pdf2img-goppler`, use:
 
 ```text
-http://pdf2img-poppler:5000/pdftocairo
+http://pdf2img-goppler:5000/pdftocairo
 ```
 
-## GitHub Actions publish
-
-This repo includes a workflow that builds and pushes Docker images to Docker Hub:
-
-- `latest` on pushes to `main`
-- semver tags on releases like `v1.0.0`
-
-Set these repository secrets:
-
-- `DOCKERHUB_USERNAME`
-- `DOCKERHUB_TOKEN`
 
 ## License
 
