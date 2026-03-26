@@ -70,7 +70,7 @@ func main() {
 
 func rootHandler(w http.ResponseWriter, _ *http.Request) {
 	w.WriteHeader(http.StatusOK)
-	_, _ = w.Write([]byte("Welcome to chanmo/poppler"))
+	_, _ = w.Write([]byte("Welcome to goppler"))
 }
 
 func healthHandler(w http.ResponseWriter, _ *http.Request) {
